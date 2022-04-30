@@ -20,7 +20,11 @@ const StackNavigator = () => {
                     component={ListScreen}
                     options={{ title: 'Simpsons' }}
                 />
-                <Stack.Screen name="Detail" component={DetailScreen} />
+                <Stack.Screen
+                    name="Detail"
+                    component={DetailScreen}
+                    options={{ title: 'Details' }}
+                />
                 <Stack.Screen name="Create" component={CreateCharScreen} />
             </Stack.Navigator>
         </NavigationContainer>
