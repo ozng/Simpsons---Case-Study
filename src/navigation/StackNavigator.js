@@ -25,7 +25,11 @@ const StackNavigator = () => {
                     component={DetailScreen}
                     options={{ title: 'Details' }}
                 />
-                <Stack.Screen name="Create" component={CreateCharScreen} />
+                <Stack.Screen
+                    name="Create"
+                    component={CreateCharScreen}
+                    options={{ title: 'Add New Character' }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     )

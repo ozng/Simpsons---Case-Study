@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import { Feather, MaterialIcons } from '@expo/vector-icons';
 
-const CharList = ({ character, index, onPress }) => {
+const CharList = ({ character, index, onPress, deleteItem, onPressUp, onPressDown }) => {
     return (
         <View style={styles.container}>
             <View style={{ ...styles.row, ...styles.wrapper }}>
@@ -21,16 +21,19 @@ const CharList = ({ character, index, onPress }) => {
                         name="arrow-up-circle"
                         size={24}
                         color="green"
+                        onPress={onPressUp}
                     />
                     <Feather
                         name="arrow-down-circle"
                         size={24}
                         color="red"
+                        onPress={onPressDown}
                     />
                     <MaterialIcons
                         name="delete-outline"
                         size={24}
                         color="black"
+                        onPress={deleteItem}
                     />
                 </View>
             </View>
