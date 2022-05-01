@@ -25,7 +25,7 @@ export const insertCharacter = (name, description, job, avatar) => {
     const promise = new Promise((resolve, reject) => {
         db.transaction((tx) => {
             tx.executeSql(
-                'INSERT INTO characters (name, description, job, avatar) VALUES (?, ?, ?, ?)',
+                'INSERT INTO characters (name, description, job, avatar ) VALUES (?, ?, ?, ?)',
                 [name, description, job, avatar],
                 (_, result) => {
                     resolve(result);
@@ -75,20 +75,20 @@ export const deleteCharacterFromStorage = (id) => {
     return promise;
 }
 
-// export const updateTodo = (id, title, content, date, isDone) => {
-//     const promise = new Promise((resolve, reject) => {
-//         db.transaction((tx) => {
-//             tx.executeSql(
-//                 `UPDATE todos SET title="${title}", content="${content}", date="${date}", isDone="${isDone}" WHERE id=${id}`,
-//                 [],
-//                 (_, result) => {
-//                     resolve(result);
-//                 },
-//                 (_, err) => {
-//                     reject(err)
-//                 }
-//             )
-//         });
-//     })
-//     return promise;
-// }
+export const deleteAllCharacters = () => {
+    const promise = new Promise((resolve, reject) => {
+        db.transaction((tx) => {
+            tx.executeSql(
+                `DELETE FROM characters`,
+                [],
+                (_, result) => {
+                    resolve(result);
+                },
+                (_, err) => {
+                    reject(err)
+                }
+            )
+        });
+    })
+    return promise;
+}

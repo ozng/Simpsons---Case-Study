@@ -1,5 +1,4 @@
 import { ADD_CHARACTER, CHANGE_ORDER, DELETE_CHARACTER, FETCH_DATA } from "../actions/character";
-import { changeIndex } from "../actions/helpers/actionHelpers";
 import Character from '../../../models/Character'
 
 const initialState = {
@@ -32,11 +31,10 @@ const characterReducer = (state = initialState, action) => {
                 characters: state.characters.filter(character => character.id !== charID)
             }
         case CHANGE_ORDER:
-            const changedOrder = changeIndex(state.characters, action.payload.id, action.payload.type)
             let arr = []
             return {
                 ...state,
-                characters: arr.concat(changedOrder)
+                characters: arr.concat(action.payload)
             }
         default:
             return state;

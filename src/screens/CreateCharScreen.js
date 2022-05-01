@@ -4,10 +4,11 @@ import { useState } from 'react';
 import { KeyboardAvoidingView, Keyboard, View, Platform, TouchableOpacity } from 'react-native'
 import { useHeaderHeight } from '@react-navigation/elements';
 // Redux
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addCharacter } from '../store/actions/character'
 
 const CreateCharScreen = ({ navigation }) => {
+    const characters = useSelector(state => state.characters.characters)
     const [name, setName] = useState('')
     const [job, setJob] = useState('')
     const [about, setAbout] = useState('')
@@ -23,10 +24,11 @@ const CreateCharScreen = ({ navigation }) => {
 
     const addCharacterHandler = () => {
         dispatch(addCharacter({
+            listorder: characters.length + 1,
             name,
             job,
             description: about,
-            avatar: imageLink
+            avatar: imageLink,
         }))
         navigation.navigate('List')
     }
