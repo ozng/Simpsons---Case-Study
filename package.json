@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "jest"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.10",
@@ -23,14 +24,14 @@
     "react-native": "0.64.3",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
-    "react-native-uuid": "^2.0.1",
     "react-native-web": "0.17.1",
     "react-redux": "^8.0.1",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "jest": "^28.0.3"
   },
   "private": true
 }

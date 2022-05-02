@@ -1,5 +1,4 @@
 import { StyleSheet, Text, ScrollView, Image } from 'react-native'
-import React from 'react'
 
 const DetailScreen = ({ route }) => {
     const characterData = route.params.character

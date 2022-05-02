@@ -22,7 +22,3 @@ export const changeIndex = (array, id, type) => {
 
     return arr
 }
-
-export const changeOrder = (listorder, type) => {
-    const moveCharacter = type === "up" ? -1 : + 1
-}

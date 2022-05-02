@@ -11,8 +11,8 @@ const CharList = ({ character, index, onPress, deleteItem, onPressUp, onPressDow
                             <Text>{index + 1}</Text>
                             <Image resizeMode='contain' source={{ uri: character.avatar }} style={styles.avatar} />
                         </View>
-                        <View>
-                            <Text>{character.name}</Text>
+                        <View style={styles.nameCont}>
+                            <Text numberOfLines={1} lineBreakMode='tail'>{character.name}</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -22,12 +22,14 @@ const CharList = ({ character, index, onPress, deleteItem, onPressUp, onPressDow
                         size={24}
                         color="green"
                         onPress={onPressUp}
+                        style={styles.icon}
                     />
                     <Feather
                         name="arrow-down-circle"
                         size={24}
                         color="red"
                         onPress={onPressDown}
+                        style={styles.icon}
                     />
                     <MaterialIcons
                         name="delete-outline"
@@ -71,5 +73,8 @@ const styles = StyleSheet.create({
         height: 0.8,
         flex: 1,
         backgroundColor: 'lightgrey'
+    },
+    icon: {
+        marginRight: 5
     }
 })

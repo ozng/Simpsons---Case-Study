@@ -12,7 +12,7 @@ const StackNavigator = () => {
         <NavigationContainer>
             <Stack.Navigator
                 screenOptions={{
-                    headerTitleAlign: 'center'
+                    headerTitleAlign: 'center',
                 }}
             >
                 <Stack.Screen
