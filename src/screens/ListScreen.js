@@ -16,8 +16,6 @@ const ListScreen = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
 
-  console.log(charData);
-
   useEffect(() => {
     dispatch(fetchCharData());
     setIsLoading(false);

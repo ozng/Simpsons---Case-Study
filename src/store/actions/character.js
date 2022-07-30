@@ -18,7 +18,7 @@ export const fetchCharData = () => {
     const fetchFromDeviceStorage = await fetchCharDataFromStorage();
 
     let characters = [];
-    if (fetchFromDeviceStorage.rows._array.length < 1) {
+    if (fetchFromDeviceStorage.rows._array.length === 0) {
       const resData = await fetchChar();
       for (const key in resData) {
         const response = await insertCharacter(

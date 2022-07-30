@@ -16,7 +16,7 @@ const characterReducer = (state = initialState, action) => {
       const fetchedCharacters = action.payload;
       return {
         ...state,
-        characters: fetchedCharacters.sort((a, b) => a.name > b.name),
+        characters: fetchedCharacters,
       };
     case ADD_CHARACTER:
       const newCharacter = new Character(
