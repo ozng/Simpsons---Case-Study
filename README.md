@@ -24,8 +24,6 @@ npm start # you can also use: expo start
 
 This will start a development server for you.
 
-You need to visit [RapidAPI - Free Covid-19 Api](https://rapidapi.com/api-sports/api/covid-193) to get your api key etc.
-
 ## Technologies
 
 - React Native [docs](https://reactnative.dev/docs/getting-started)
