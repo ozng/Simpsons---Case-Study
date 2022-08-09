@@ -1,4 +1,4 @@
-# Covid-19 Status Mobile App
+# Simpsons Mobile App - Case Study
 
 ## Screenshots
 
